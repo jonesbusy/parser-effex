@@ -1,0 +1,9 @@
+#summary One-sentence summary of this page.
+
+= Build =
+
+<code>make</code> pour construire les deux DLL
+
+<code>make test</code> pour construire un petit programme de test
+
+Makefile uniquement pour windows pour le moment.
