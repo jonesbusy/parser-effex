@@ -1,9 +1,9 @@
-#summary One-sentence summary of this page.
+#summary How to (re)build the library
 
 = Build =
 
-<code>make</code> pour construire les deux DLL
+<code>make</code> into root directory to compile the two library (libFunction and libParserEffex)
 
-<code>make test</code> pour construire un petit programme de test
+<code>make test</code> into root directory to compile the two library and build a small test program (Parser/Exemple.cpp) 
 
-Makefile uniquement pour windows pour le moment.
+The Makefile is only available for Windows architecture (for the moment...)
