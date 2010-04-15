@@ -52,8 +52,9 @@ enum Tokens
 	UNKNOWN
 };
 
-// Le scanner va parser le type de variable des AbstractFunction
-// Doit etre identique pour que le scanner fonctionne
+// Le scanner va parser le type de variable configure dans
+// AbstractFunction. Doit etre identique pour que le scanner
+// fonctionne
 const char INDETERMINATE = VARIABLE;
 
 class DLL_EXPORT Scanner

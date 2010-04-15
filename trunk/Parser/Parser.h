@@ -94,11 +94,11 @@ public :
     |
     | Visibility   : Public
     |
-    | Parameters   : input - La nouvelle chaine d'entree
+    | Parameters   : [input = ""] - La nouvelle chaine d'entree
     |
     | Return value :
     ***************************************************************/
-    Parser(std::string input);
+    Parser(std::string input = "");
 
     /***************************************************************
     | Description  : Supprime le parseur

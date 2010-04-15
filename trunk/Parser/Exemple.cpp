@@ -12,7 +12,7 @@ int main()
 {
     // Fabrication de polynomes
 
-    Parser parser("");
+    Parser parser;
 
     while(true)
     {
@@ -23,18 +23,17 @@ int main()
 
         cout << endl;
 
-
         IExpression* expression = parser.parse();
 
         if(expression == NULL)
             cout << parser.getError()->what() << endl << endl;
-			
         else
             for (double i = -1 ; i < 1 ; i += 0.0625)
                 cout << expression->eval(i) << endl;
 
 
     }
-	
+
+
     return EXIT_SUCCESS;
 }

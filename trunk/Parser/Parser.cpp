@@ -49,7 +49,7 @@ IExpression* Parser::parse()
     // Trop de paranthese droite
     if(scanner->egalityParen() == -1)
     {
-        this->error = new ParserError(TOO_MANY_RIGHT_PARENT, scanner->currentTokenPosition);
+        this->error = new ParserError(EN_TOO_MANY_RIGHT_PARENT, scanner->currentTokenPosition);
         return NULL;
     }
 
@@ -65,12 +65,14 @@ ParserError* Parser::getError() const
 
 IExpression* Parser::expression() const
 {
+    // Sauver la position courante
+    int position = scanner->currentTokenPosition;
 
     IExpression* result = term();
 
     // Non valide apres un terme
     if(!isOperator(scanner->currentToken) && scanner->currentToken != RIGHT_PAREN && scanner->currentToken != END_OF_LINE)
-       throw new ParserError(OPERATOR_EXPECTED, scanner->currentTokenPosition);
+       throw new ParserError(EN_OPERATOR_EXPECTED, position);
 
     // Recuperer les termes
     while(scanner->currentToken == PLUS || scanner->currentToken == MINUS)
@@ -115,6 +117,10 @@ IExpression* Parser::term() const
 
 IExpression* Parser::unary() const
 {
+
+    // Sauver la position courante
+    int position = scanner->currentTokenPosition;
+
     // Sous arbre
     IExpression* tree;
 
@@ -126,7 +132,7 @@ IExpression* Parser::unary() const
         // Facteur de droite
         IExpression* nextFactor = factor();
         if (nextFactor == NULL)
-            throw new ParserError(MISSING_OPERAND, scanner->currentTokenPosition);
+            throw new ParserError(EN_MISSING_OPERAND, position);
 
         // Changer le signe du prochain facteur
         tree = new Operation('*', new Polynomial(-1), nextFactor);
@@ -145,7 +151,7 @@ IExpression* Parser::unary() const
 
     // Deuxieme facteur inexistant
     if(tree == NULL)
-        throw new ParserError(MISSING_OPERAND, scanner->currentTokenPosition);
+        throw new ParserError(EN_MISSING_OPERAND, position);
 
     return tree;
 
@@ -153,6 +159,10 @@ IExpression* Parser::unary() const
 
 IExpression* Parser::factor() const
 {
+
+    // Sauver la position courante
+    int position = scanner->currentTokenPosition;
+
     // Sous-arbre
     IExpression* tree = exponent();
 
@@ -163,7 +173,7 @@ IExpression* Parser::factor() const
         // Prochain exposant
         IExpression* nextExponent = exponent();
         if (nextExponent == NULL)
-            throw new ParserError(MISSING_OPERAND, scanner->currentTokenPosition);
+            throw new ParserError(EN_MISSING_OPERAND, position);
 
         // Construire le nouvel arbre
         tree = new Operation('^', tree, nextExponent);
@@ -175,6 +185,10 @@ IExpression* Parser::factor() const
 
 IExpression* Parser::exponent() const
 {
+
+    // Sauver la position courante
+    int position = scanner->currentTokenPosition;
+
     // Au depart l'arbre est null
     IExpression* tree = NULL;
 
@@ -187,7 +201,7 @@ IExpression* Parser::exponent() const
         // Ne devrait jamais arriver, car le scanner s'assure de passer
         // un polynome correcte a la fabrique
         if (function == NULL)
-            throw new ParserError("Cannot parse polynomial", scanner->currentTokenPosition);
+            throw new ParserError("Cannot parse polynomial", position);
 
         // Feuille de l'arbre
         else
@@ -206,7 +220,7 @@ IExpression* Parser::exponent() const
 
         // Impossible de fabriquer la fonction
         if (function == NULL)
-            throw new ParserError(UNKNOWN_FUNCTION, scanner->currentTokenPosition);
+            throw new ParserError(EN_UNKNOWN_FUNCTION, position - scanner->getIdentifier().size());
 
         // On doit trouver une paranthese ouvrante
         scanner->nextToken();
@@ -222,13 +236,13 @@ IExpression* Parser::exponent() const
             if(scanner->currentToken == RIGHT_PAREN)
                 scanner->nextToken();
             else
-                throw new ParserError(RIGHT_PAREN_EXPECTED, scanner->currentTokenPosition);
+                throw new ParserError(EN_RIGHT_PAREN_EXPECTED, position);
 
         }
 
         // Autre chose apres le nom de la fonction
         else
-            throw new ParserError(LEFT_PAREN_EXPECTED, scanner->currentTokenPosition);
+            throw new ParserError(EN_LEFT_PAREN_EXPECTED, position);
 
 
     }
@@ -246,7 +260,7 @@ IExpression* Parser::exponent() const
         if(scanner->currentToken == RIGHT_PAREN)
             scanner->nextToken();
         else
-            throw new ParserError(RIGHT_PAREN_EXPECTED, scanner->currentTokenPosition);
+            throw new ParserError(EN_RIGHT_PAREN_EXPECTED, position);
 
     }
 
@@ -254,7 +268,7 @@ IExpression* Parser::exponent() const
     else
     {
         if (scanner->currentToken != END_OF_LINE)
-            throw new ParserError(MISSING_OPERAND, scanner->currentTokenPosition);
+            throw new ParserError(EN_MISSING_OPERAND, position);
     }
 
     return tree;

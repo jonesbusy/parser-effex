@@ -16,3 +16,13 @@ const char* ParserError::what() const throw()
     out << position;
     return (message + " at position " + out.str()).c_str();
 }
+
+std::string ParserError::getMessage() const
+{
+    return this->message;
+}
+
+int ParserError::getPosition() const
+{
+    return this->position;
+}

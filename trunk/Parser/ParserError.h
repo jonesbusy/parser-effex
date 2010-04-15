@@ -10,13 +10,13 @@
 |
 | Created      : 04.03.2010
 |
-| Modified     : -
+| Modified     : 14.03.2010 - Ajout de getMessage et getPosition
 |
 | C++ std      : string
 |                sstream
 |                exception
 |
-| Dependencies :
+| Dependencies : -
 |
 | Version      : 1.0
 |
@@ -57,17 +57,40 @@ public :
     ***************************************************************/
     virtual ~ParserError() throw();
 
-
     /***************************************************************
-    | Description  : Permet de retourner le message d'erreur
+    | Description  : Permet de retourner le message d'erreur entier
+    |                (message + at postion + position)
     |
     | Visibility   : Public
     |
     | Parameters   : -
     |
-    | Return value :
+    | Return value : Le message d'erreur
     ***************************************************************/
     virtual const char* what() const throw();
+
+    /***************************************************************
+    | Description  : Permet de retourner uniquement le message
+    |                d'erreur
+    |
+    | Visibility   : Public
+    |
+    | Parameters   : -
+    |
+    | Return value : Le message d'erreur
+    ***************************************************************/
+    std::string getMessage() const;
+
+    /***************************************************************
+    | Description  : Permet de retourner la position de l'erreur
+    |
+    | Visibility   : Public
+    |
+    | Parameters   : -
+    |
+    | Return value : La position de l'erreur
+    ***************************************************************/
+    int getPosition() const;
 
 private :
 

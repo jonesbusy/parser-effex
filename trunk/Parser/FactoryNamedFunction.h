@@ -41,7 +41,7 @@ public :
 
     /***************************************************************
     | Description  : Permet de creer la nouvelle fabrique de
-    |                de fonction nommee
+    |                de fonction nommee (sin, cos, abs, etc.)
     |
     | Visibility   : Public
     |
@@ -79,7 +79,7 @@ private :
 
     /***************************************************************
     | Description  : Permettant de faire correspondre le nom de la
-    |                fonction a la fonction elle meme
+    |                fonction (string) a la fonction elle meme
     ***************************************************************/
     std::map<std::string, double(*)(double)> functions;
 

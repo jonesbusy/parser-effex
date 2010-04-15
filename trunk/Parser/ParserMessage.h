@@ -25,15 +25,15 @@
 #include <string>
 
 // Scanner
-const std::string UNKNOWN_CHAR          = "Illegal character found";
+const std::string EN_UNKNOWN_CHAR          = "Illegal character found";
 
 // Parser
-const std::string DIGIT_EXPECTED        = "Digit expected";
-const std::string MISSING_OPERAND       = "Missing operand";
-const std::string OPERATOR_EXPECTED     = "Operator expected";
-const std::string RIGHT_PAREN_EXPECTED  = "Right parenthesis expected";
-const std::string LEFT_PAREN_EXPECTED   = "Left parenthesis expected";
-const std::string TOO_MANY_RIGHT_PARENT = "Too many right parenthesis";
-const std::string UNKNOWN_FUNCTION      = "Unknow name function";
+const std::string EN_DIGIT_EXPECTED        = "Digit expected";
+const std::string EN_MISSING_OPERAND       = "Missing operand";
+const std::string EN_OPERATOR_EXPECTED     = "Operator expected";
+const std::string EN_RIGHT_PAREN_EXPECTED  = "Right parenthesis expected";
+const std::string EN_LEFT_PAREN_EXPECTED   = "Left parenthesis expected";
+const std::string EN_TOO_MANY_RIGHT_PARENT = "Too many right parenthesis";
+const std::string EN_UNKNOWN_FUNCTION      = "Unknow name function";
 
 #endif // PARSERMESSAGE_H_INCLUDED

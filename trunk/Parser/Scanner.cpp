@@ -109,8 +109,11 @@ void Scanner::nextToken()
                 // Erreur
                 if (!isdigit(currentChar))
                 {
+                    // Sauver la position de l'erreur
+                    int position = currentTokenPosition;
+
                     clean();
-                    throw new ParserError(DIGIT_EXPECTED, currentTokenPosition);
+                    throw new ParserError(EN_DIGIT_EXPECTED, position - 1);
                 }
 
                 while(isdigit(currentChar))
@@ -186,8 +189,12 @@ void Scanner::nextToken()
             if (!isalpha(currentChar))
             {
                 currentToken = UNKNOWN;
+
+                // Sauver la position de l'erreur
+                int position = currentTokenPosition;
                 clean();
-                throw new ParserError(UNKNOWN_CHAR, currentTokenPosition);
+
+                throw new ParserError(EN_UNKNOWN_CHAR, position);
             }
 
             // Constantes pi
@@ -218,7 +225,6 @@ void Scanner::nextToken()
                 buffer += currentChar;
                 nextChar();
             }
-
             identifier = buffer;
             break;
         }
