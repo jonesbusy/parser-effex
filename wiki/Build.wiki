@@ -10,6 +10,6 @@ The Makefile is only available for Windows architecture (for the moment...)
 
 == Windows ==
 
-GCC can be found at [http://sourceforge.net/projects/mingw/files/]
+MinGW can be found at [http://sourceforge.net/projects/mingw/files/]
 
-[Install folder of MinGW]/bin (containing gcc.exe, make.exe, ...) must be referenced into PATH variable
+{Install folder}/bin (containing gcc.exe, make.exe, ...) must be referenced into PATH variable
