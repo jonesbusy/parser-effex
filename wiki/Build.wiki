@@ -1,4 +1,4 @@
-#summary How to (re)build the library
+#summary How to (re)build the library and test program
 
 = Build =
 
@@ -7,3 +7,9 @@
 <code>make test</code> into root directory to compile the two library and build a small test program (Parser/Exemple.cpp) 
 
 The Makefile is only available for Windows architecture (for the moment...)
+
+== Windows ==
+
+GCC can be found at [http://sourceforge.net/projects/mingw/files/]
+
+[Install folder of MinGW]/bin (containing gcc.exe, make.exe, ...) must be referenced into PATH variable
