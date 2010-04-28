@@ -113,7 +113,7 @@ void Scanner::nextToken()
                     int position = currentTokenPosition;
 
                     clean();
-                    throw new ParserError(EN_DIGIT_EXPECTED, position - 1);
+                    throw new ParserError(DIGIT_EXPECTED[language], position - 1);
                 }
 
                 while(isdigit(currentChar))
@@ -194,7 +194,7 @@ void Scanner::nextToken()
                 int position = currentTokenPosition;
                 clean();
 
-                throw new ParserError(EN_UNKNOWN_CHAR, position);
+                throw new ParserError(UNKNOWN_CHAR[language], position);
             }
 
             // Constantes pi

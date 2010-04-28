@@ -9,7 +9,7 @@
 |
 | Created      : 04.03.2010
 |
-| Modified     : -
+| Modified     : 28.04.2010 - Ajout de la langue francaise
 |
 | C++ std      : string
 |
@@ -24,16 +24,18 @@
 
 #include <string>
 
+const int language = 1;
+
 // Scanner
-const std::string EN_UNKNOWN_CHAR          = "Illegal character found";
+const char* const UNKNOWN_CHAR[]           = {"Illegal character found", "Caractere inconnu trouve"};
 
 // Parser
-const std::string EN_DIGIT_EXPECTED        = "Digit expected";
-const std::string EN_MISSING_OPERAND       = "Missing operand";
-const std::string EN_OPERATOR_EXPECTED     = "Operator expected";
-const std::string EN_RIGHT_PAREN_EXPECTED  = "Right parenthesis expected";
-const std::string EN_LEFT_PAREN_EXPECTED   = "Left parenthesis expected";
-const std::string EN_TOO_MANY_RIGHT_PARENT = "Too many right parenthesis";
-const std::string EN_UNKNOWN_FUNCTION      = "Unknow name function";
+const char* const DIGIT_EXPECTED[]         = {"Digit expected", "Nombre attendu"};
+const char* const MISSING_OPERAND[]        = {"Missing operand", "Operande attendu"};
+const std::string OPERATOR_EXPECTED[]      = {"Operator expected", "Operateur attendu"};
+const std::string RIGHT_PAREN_EXPECTED[]   = {"Right parenthesis expected", "Parenthese droite attendue"};
+const std::string LEFT_PAREN_EXPECTED[]    = {"Left parenthesis expected", "Parenthese gauche attendue"};
+const std::string TOO_MANY_RIGHT_PARENT[]  = {"Too many right parenthesis", "Trop de parenthese(s) droite"};
+const std::string UNKNOWN_FUNCTION[]       = {"Unknow name function", "Nom de fonction inconnu"};
 
 #endif // PARSERMESSAGE_H_INCLUDED

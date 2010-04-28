@@ -16,7 +16,7 @@
 |                sstream
 |                exception
 |
-| Dependencies : -
+| Dependencies : ParserMessage.h
 |
 | Version      : 1.0
 |
@@ -28,6 +28,8 @@
 #include <string>
 #include <sstream>
 #include <exception>
+
+#include "ParserMessage.h"
 
 class ParserError : public std::exception
 {
