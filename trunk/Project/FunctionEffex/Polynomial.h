@@ -99,11 +99,14 @@ public:
     |
     | Visibility   : Public
     |
-    | Parameters   :
+    | Parameters   : value            - Valeur de l'indeterminee
+    |                [cases = NULL]   - Case pour la detection
+    |                                   des discontinuites.
+    |                                   (voir Cases.h)
     |
     | Return value : La valeur du monome
     ***************************************************************/
-    double eval(double value) const;
+    double eval(double value, Cases* cases = NULL) const;
 
     /***************************************************************
     | Description  : Permet d'afficher un monome sur le flux

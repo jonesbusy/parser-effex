@@ -215,12 +215,15 @@ IExpression* Parser::exponent() const
     else if(scanner->currentToken == NAMED_FONCTION)
     {
 
+        // Pour recuperer le nom de la fonction
+        std::string name = scanner->getIdentifier();
+
         // Recuperer l'instance
-        AbstractFunction* function = factoryNamedFunction->getInstance(scanner->getIdentifier());
+        AbstractFunction* function = factoryNamedFunction->getInstance(name);
 
         // Impossible de fabriquer la fonction
         if (function == NULL)
-            throw new ParserError(UNKNOWN_FUNCTION[language], position - scanner->getIdentifier().size());
+            throw new ParserError(UNKNOWN_FUNCTION[language], position - name.size());
 
         // On doit trouver une paranthese ouvrante
         scanner->nextToken();
@@ -230,7 +233,7 @@ IExpression* Parser::exponent() const
 
             // Nouvelle operation fonction function(expression())
             // Feuille de l'arbre
-            tree = new Operation('f', function, expression());
+            tree = new Operation('f', function, expression(), name);
 
             // Doit se terminer par une paranthese
             if(scanner->currentToken == RIGHT_PAREN)

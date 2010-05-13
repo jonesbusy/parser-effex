@@ -2,19 +2,21 @@
 |
 | File         : Operation.h
 |
-| Description  :
+| Description  : Permet d'effectuer une operation sur un noeud de
+|                l'arbre
 |
 | Author       : Valentin Delaye
 |
 | Created      : 17.03.2010
 |
-| Modified     : -
+| Modified     : 12.05.2010 - Add name attribute for function
 |
-| C++ std      : -
+| C++ std      : cmath
+|                string
 |
 | Dependencies : Expression.h
 |
-| Version      : 1.0
+| Version      : 2.0
 |
 *******************************************************************/
 
@@ -22,6 +24,9 @@
 #define OPERATION_H_INCLUDED
 
 #include <cmath>
+#include <string>
+
+#define PI 3.141592653589794
 
 #include "IExpression.h"
 
@@ -45,6 +50,11 @@ private :
     ***************************************************************/
     IExpression* right;
 
+    /***************************************************************
+    | Description  : Nom de la fonction (si fonction unaire)
+    ***************************************************************/
+    std::string name;
+
 public :
 
     /***************************************************************
@@ -52,13 +62,14 @@ public :
     |
     | Visibility   : Public
     |
-    | Parameters   : operation - L'operation (+, -, *, /)
-    |                left      - Operande de gauche
-    |                right     - Operande de droite
+    | Parameters   : operation     - L'operation (+, -, *, /, f)
+    |                left          - Operande de gauche
+    |                right         - Operande de droite
+    |                [name = ""] - Nom de la fonction
     |
     | Return value : -
     ***************************************************************/
-    Operation(char operation, IExpression* left, IExpression* right);
+    Operation(char operation, IExpression* left, IExpression* right, std::string name = "");
 
     /***************************************************************
     | Description  : Permet de supprimer une operation
@@ -77,11 +88,14 @@ public :
     |
     | Visibility   : Public
     |
-    | Parameters   : value - Valeur de l'indeterminee
+    | Parameters   : value            - Valeur de l'indeterminee
+    |                [cases = NULL]   - Case pour la detection
+    |                                   des discontinuites.
+    |                                   (voir Cases.h)
     |
     | Return value : -
     ***************************************************************/
-	double eval(double value) const;
+	double eval(double value, Cases* cases = NULL) const;
 
 };
 

@@ -62,14 +62,17 @@ public :
     |
     | Visibility   : Public
     |
-    | Parameters   : value - La valeur d'evaluation
+    | Parameters   : value            - Valeur de l'indeterminee
+    |                [cases = NULL]   - Case pour la detection
+    |                                   des discontinuites.
+    |                                   (voir Cases.h)
     |
     | Return value : -
     ***************************************************************/
-    double eval(double value) const;
+    double eval(double value, Cases* cases = NULL) const;
 
     /***************************************************************
-    | Description  : Evalue la fonction nommee
+    | Description  : Evalue la fonction nommee a une certaine valeur
     |
     | Visibility   : Public
     |

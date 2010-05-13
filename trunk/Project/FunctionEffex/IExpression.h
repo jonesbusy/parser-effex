@@ -34,6 +34,8 @@
     #define DLL_EXPORT __declspec(dllimport)
 #endif
 
+#include "Cases.h"
+
 class DLL_EXPORT IExpression
 {
 
@@ -41,15 +43,19 @@ public :
 
     /***************************************************************
     | Description  : Fonction virtuelle pure. Permet d'evaluer l'
-    |                expression a une certaine valeur
+    |                expression a une certaine valeur.
+    |                Doit etre redefinie pour toute les fonctions.
     |
     | Visibility   : Public
     |
-    | Parameters   : value - Valeur de l'indeterminee
+    | Parameters   : value            - Valeur de l'indeterminee
+    |                [cases = NULL]   - Case pour la detection
+    |                                   des discontinuites.
+    |                                   (voir Cases.h)
     |
     | Return value : -
     ***************************************************************/
-	virtual double eval(double value) const = 0;
+	virtual double eval(double value, Cases* cases = NULL) const = 0;
 
 };
 

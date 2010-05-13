@@ -6,7 +6,7 @@ NamedFunction::NamedFunction(std::string name, double(*function)(double))
 
 }
 
-double NamedFunction::eval(double value) const
+double NamedFunction::eval(double value, Cases* cases) const
 {
     return function(value);
 }

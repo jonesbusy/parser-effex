@@ -3,7 +3,7 @@
 | File         : AbstractFunction.h
 |
 | Description  : Classe abstraite qui sert de base pour les
-|                fonctions
+|                fonctions.
 |
 | Author       : Valentin Delaye
 |
@@ -44,7 +44,7 @@ public :
     |
     | Return value : -
     ***************************************************************/
-    AbstractFunction(char variable = VARIABLE);
+    explicit AbstractFunction(char variable = VARIABLE);
 
     /***************************************************************
     | Description  : Destructeur, permet de detruire une fonction
@@ -59,15 +59,19 @@ public :
 
     /***************************************************************
     | Description  : Fonction virtuelle pure. Permet d'evaluer la
-    |                fonction a une certaine valeur
+    |                fonction a une certaine valeur. Doit etre
+    |                redefinie pour toute les fonctions
     |
     | Visibility   : Public
     |
-    | Parameters   : value - Valeur de l'indeterminee
+    | Parameters   : value            - Valeur de l'indeterminee
+    |                [cases = NULL]   - Case pour la detection
+    |                                   des discontinuites.
+    |                                   (voir Cases.h)
     |
     | Return value : -
     ***************************************************************/
-	virtual double eval(double value) const = 0;
+	virtual double eval(double value, Cases* cases = NULL) const = 0;
 
     /***************************************************************
     | Description  : Permet d'evaluer la fonction avec la valeur

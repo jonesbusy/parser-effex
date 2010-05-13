@@ -1,7 +1,7 @@
 CC=g++.exe
 RM=del
 
-OBJ= AbstractFunction.o Operation.o Polynomial.o NamedFunction.o
+OBJ= AbstractFunction.o Operation.o Polynomial.o NamedFunction.o Cases.o
 
 OUT=libFunctionEffex.dll
 
@@ -19,6 +19,9 @@ Polynomial.o : Polynomial.h Polynomial.cpp
 	
 NamedFunction.o : NamedFunction.h NamedFunction.cpp
 	$(CC) -c NamedFunction.cpp
+	
+Cases.o : Cases.h Cases.cpp
+	$(CC) -c Cases.cpp
 
 clean: 
 	$(RM) $(OBJ)

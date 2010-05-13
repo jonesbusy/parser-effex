@@ -24,6 +24,11 @@ Polynomial::Polynomial(int constant, int exponent, char variable) :
 
 }
 
+double Polynomial::eval(double value, Cases* cases) const
+{
+	return this->CONSTANT * pow(value, this->EXPONENT);
+}
+
 std::ostream& operator <<(std::ostream& out, const Polynomial& polynomial)
 {
     // Valeur indeterminee
@@ -59,7 +64,3 @@ Polynomial operator * (const Polynomial& polynomial1, const Polynomial& polynomi
     return Polynomial(polynomial1.CONSTANT * polynomial2.CONSTANT, polynomial1.EXPONENT + polynomial2.EXPONENT);
 }
 
-double Polynomial::eval(double value) const
-{
-	return this->CONSTANT * pow(value, this->EXPONENT);
-}
