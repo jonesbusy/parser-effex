@@ -110,3 +110,114 @@
 
 1274311131 d:\heig-vd\pro\sources\project\parser\parserexport.h
 
+1271346911 source:d:\documents\heig-vd\pro\sources\project\parser\factorynamedfunction.cpp
+	"FactoryNamedFunction.h"
+
+1274433820 d:\documents\heig-vd\pro\sources\project\parser\factorynamedfunction.h
+	<map>
+	<string>
+	<exception>
+	<cmath>
+	"NamedFunction.h"
+	"IFactoryFunction.h"
+
+1274276953 d:\documents\heig-vd\pro\sources\project\expression\namedfunction.h
+	<string>
+	<cmath>
+	<iostream>
+	"ExpressionExport.h"
+	"AbstractFunction.h"
+
+1274277540 d:\documents\heig-vd\pro\sources\project\expression\expressionexport.h
+
+1274276856 d:\documents\heig-vd\pro\sources\project\expression\abstractfunction.h
+	<iostream>
+	"ExpressionExport.h"
+	"IExpression.h"
+
+1274307955 d:\documents\heig-vd\pro\sources\project\expression\iexpression.h
+	"ExpressionExport.h"
+	"Cases.h"
+
+1274866204 d:\documents\heig-vd\pro\sources\project\expression\cases.h
+	<vector>
+	"ExpressionExport.h"
+
+1274309144 d:\documents\heig-vd\pro\sources\project\parser\ifactoryfunction.h
+	<string>
+	"AbstractFunction.h"
+
+1274309927 source:d:\documents\heig-vd\pro\sources\project\parser\factorypolynomial.cpp
+	"FactoryPolynomial.h"
+
+1274433843 d:\documents\heig-vd\pro\sources\project\parser\factorypolynomial.h
+	"IFactoryFunction.h"
+	"Polynomial.h"
+	<map>
+	<string>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<algorithm>
+	<cmath>
+
+1274277559 d:\documents\heig-vd\pro\sources\project\expression\polynomial.h
+	<ostream>
+	<cmath>
+	"ExpressionExport.h"
+	"AbstractFunction.h"
+
+1285936163 source:d:\documents\heig-vd\pro\sources\project\parser\parser.cpp
+	"Parser.h"
+
+1274434434 d:\documents\heig-vd\pro\sources\project\parser\parser.h
+	"ParserExport.h"
+	"Scanner.h"
+	"IFactoryFunction.h"
+	"FactoryNamedFunction.h"
+	"FactoryPolynomial.h"
+	"Polynomial.h"
+	"AbstractFunction.h"
+	"NamedFunction.h"
+	"IExpression.h"
+	"ParserMessage.h"
+	"Operation.h"
+
+1274311131 d:\documents\heig-vd\pro\sources\project\parser\parserexport.h
+
+1274433776 d:\documents\heig-vd\pro\sources\project\parser\scanner.h
+	<string>
+	<vector>
+	<iostream>
+	"AbstractFunction.h"
+	"ParserError.h"
+	"ParserMessage.h"
+
+1274432930 d:\documents\heig-vd\pro\sources\project\parser\parsererror.h
+	<string>
+	<sstream>
+	<exception>
+	"ParserMessage.h"
+
+1274431969 d:\documents\heig-vd\pro\sources\project\parser\parsermessage.h
+	<string>
+
+1274276508 d:\documents\heig-vd\pro\sources\project\expression\operation.h
+	<cmath>
+	<string>
+	"ExpressionExport.h"
+	"IExpression.h"
+
+1272441256 source:d:\documents\heig-vd\pro\sources\project\parser\parsererror.cpp
+	"ParserError.h"
+
+1285936439 source:d:\documents\heig-vd\pro\sources\project\parser\scanner.cpp
+	"Scanner.h"
+
+1274307385 source:d:\documents\heig-vd\pro\sources\project\parser\exemple.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	<iomanip>
+	"Parser.h"
+

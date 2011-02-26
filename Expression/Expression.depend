@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1273745334 source:d:\heig-vd\pro\sources\project\expression\cases.cpp
+	"Cases.h"
+
+1274276899 d:\heig-vd\pro\sources\project\expression\cases.h
+	<vector>
+	"ExpressionExport.h"
+
+1274277540 d:\heig-vd\pro\sources\project\expression\expressionexport.h
+
+1273743411 source:d:\heig-vd\pro\sources\project\expression\namedfunction.cpp
+	"NamedFunction.h"
+
+1274276953 d:\heig-vd\pro\sources\project\expression\namedfunction.h
+	<string>
+	<cmath>
+	<iostream>
+	"ExpressionExport.h"
+	"AbstractFunction.h"
+
+1274276856 d:\heig-vd\pro\sources\project\expression\abstractfunction.h
+	<iostream>
+	"ExpressionExport.h"
+	"IExpression.h"
+
+1274307847 d:\heig-vd\pro\sources\project\expression\iexpression.h
+	"ExpressionExport.h"
+	"Cases.h"
+
+1274277384 source:d:\heig-vd\pro\sources\project\expression\operation.cpp
+	"Operation.h"
+
+1274276508 d:\heig-vd\pro\sources\project\expression\operation.h
+	<cmath>
+	<string>
+	"ExpressionExport.h"
+	"IExpression.h"
+
+1273697548 source:d:\heig-vd\pro\sources\project\expression\polynomial.cpp
+	"Polynomial.h"
+
+1274277559 d:\heig-vd\pro\sources\project\expression\polynomial.h
+	<ostream>
+	<cmath>
+	"ExpressionExport.h"
+	"AbstractFunction.h"
+
+1273743399 source:d:\heig-vd\pro\sources\project\expression\abstractfunction.cpp
+	"AbstractFunction.h"
+

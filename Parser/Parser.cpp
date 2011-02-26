@@ -195,6 +195,7 @@ IExpression* Parser::exponent() const
     // Polynome
     if(scanner->currentToken == POLYNOMIAL)
     {
+
         // Recuperer l'instance de fonction
         AbstractFunction* function = factoryPolynomial->getInstance(scanner->getIdentifier());
 
@@ -209,6 +210,9 @@ IExpression* Parser::exponent() const
 
         scanner->nextToken();
 
+        if(scanner->currentToken == NAMED_FONCTION)
+            throw new ParserError(OPERATOR_EXPECTED[language], position);
+
     }
 
     // Fonction nommee
@@ -217,6 +221,7 @@ IExpression* Parser::exponent() const
 
         // Pour recuperer le nom de la fonction
         std::string name = scanner->getIdentifier();
+
 
         // Recuperer l'instance
         AbstractFunction* function = factoryNamedFunction->getInstance(name);

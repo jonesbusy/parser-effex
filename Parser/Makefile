@@ -1,4 +1,4 @@
-CC=g++.exe
+CC=g++
 CP=copy
 CD=cd
 RM=del
