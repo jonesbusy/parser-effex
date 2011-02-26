@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="Exemple.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="282" topLine="0" />
+	</File>
+	<File name="FactoryNamedFunction.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="227" topLine="0" />
+	</File>
+	<File name="FactoryNamedFunction.h" open="0" top="0" tabpos="4">
+		<Cursor position="776" topLine="17" />
+	</File>
+	<File name="FactoryPolynomial.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="131" topLine="0" />
+	</File>
+	<File name="FactoryPolynomial.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="IFactoryFunction.h" open="0" top="0" tabpos="2">
+		<Cursor position="334" topLine="3" />
+	</File>
+	<File name="Parser.cpp" open="1" top="1" tabpos="0">
+		<Cursor position="5036" topLine="196" />
+	</File>
+	<File name="Parser.h" open="0" top="0" tabpos="1">
+		<Cursor position="500" topLine="0" />
+	</File>
+	<File name="ParserError.h" open="0" top="0" tabpos="7">
+		<Cursor position="1386" topLine="0" />
+	</File>
+	<File name="ParserExport.h" open="0" top="0" tabpos="5">
+		<Cursor position="237" topLine="0" />
+	</File>
+	<File name="ParserMessage.h" open="0" top="0" tabpos="6">
+		<Cursor position="70" topLine="2" />
+	</File>
+	<File name="Scanner.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="5492" topLine="218" />
+	</File>
+	<File name="Scanner.h" open="0" top="0" tabpos="8">
+		<Cursor position="3343" topLine="137" />
+	</File>
+</CodeBlocks_layout_file>

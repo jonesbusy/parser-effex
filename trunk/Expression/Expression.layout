@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="AbstractFunction.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="311" topLine="0" />
+	</File>
+	<File name="AbstractFunction.h" open="0" top="0" tabpos="1">
+		<Cursor position="1050" topLine="0" />
+	</File>
+	<File name="Cases.h" open="0" top="0" tabpos="0">
+		<Cursor position="1016" topLine="24" />
+	</File>
+	<File name="ExpressionExport.h" open="0" top="0" tabpos="1">
+		<Cursor position="245" topLine="0" />
+	</File>
+	<File name="IExpression.h" open="0" top="0" tabpos="2">
+		<Cursor position="1391" topLine="28" />
+	</File>
+	<File name="NamedFunction.h" open="0" top="0" tabpos="0">
+		<Cursor position="1280" topLine="14" />
+	</File>
+	<File name="Operation.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="376" topLine="0" />
+	</File>
+	<File name="Operation.h" open="0" top="0" tabpos="0">
+		<Cursor position="265" topLine="0" />
+	</File>
+	<File name="Polynomial.h" open="0" top="0" tabpos="3">
+		<Cursor position="486" topLine="6" />
+	</File>
+</CodeBlocks_layout_file>

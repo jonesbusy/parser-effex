@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="delete.png">images/delete.png</file>
+        <file alias="palette.png">images/palette.png</file>
+        <file alias="trash.png">images/trash.png</file>
+        <file alias="center.png">images/center.png</file>
+        <file alias="about.png">images/about.png</file>
+        <file alias="kiki.png">images/kiki.png</file>
+    </qresource>
+</RCC>
